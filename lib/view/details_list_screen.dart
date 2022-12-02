@@ -55,7 +55,7 @@ class _DetailScreenState extends State<DetailScreen> {
             SliverFillRemaining(
               child: ListView(
                 padding: EdgeInsets.symmetric(horizontal: 8, vertical: 20),
-                physics: NeverScrollableScrollPhysics(),
+                // physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 children: [
                   Column(children: <Widget>[
