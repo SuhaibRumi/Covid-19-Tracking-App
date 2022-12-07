@@ -1,16 +1,20 @@
 # covid_19_tracking_app
 
-A new Flutter project.
+This is a simple Covid-19 Tracking app.
+A live trakcer for COVID19 stats across the Globe and country list. It uses APIs so the data is live.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Screenshort
+<p Align ="center">
+<img src = "/ScreenShort/spalsh screen.jpg" height = 450;> <img src = "ScreenShort/load data.jpg" height = 450;>
+<img src = "ScreenShort/shimmer effects.jpg" height = 450;> <img src = "/ScreenShort/counrty histroy.jpg" height = 450;> 
+ <img src = "/ScreenShort/about.jpg" height = 450;>
 
-A few resources to get you started if this is your first Flutter project:
+</p>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## APIs Information
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+-For Global data:https://disease.sh/v3/covid-19/all
+
+-For Countries data:https://disease.sh/v3/covid-19/countries
+
