@@ -43,8 +43,8 @@ class _SplashScreenState extends State<SplashScreen>
                 animation: _controller,
                 child: const Center(
                   child: Image(
-                      height: 300,
-                      width: 300,
+                      height: 200,
+                      width: 200,
                       fit: BoxFit.cover,
                       image: AssetImage(
                         "assets/images/covid.png",

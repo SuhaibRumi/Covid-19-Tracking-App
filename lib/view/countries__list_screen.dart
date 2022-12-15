@@ -46,6 +46,7 @@ class _CountriesListScreeenState extends State<CountriesListScreeen> {
                   cursorHeight: 22,
                   decoration: InputDecoration(
                       hintText: 'Search with country name',
+                      hintStyle: TextStyle(color: Colors.grey[500]),
                       suffixIcon: searchController.text.isEmpty
                           ? const Icon(Icons.search)
                           : GestureDetector(
@@ -114,6 +115,11 @@ class _CountriesListScreeenState extends State<CountriesListScreeen> {
                                 return Column(
                                   children: [
                                     Card(
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10)),
+                                      elevation: 8,
+                                      shadowColor: Colors.grey[500],
                                       child: InkWell(
                                         onTap: () {
                                           Navigator.push(
@@ -164,45 +170,53 @@ class _CountriesListScreeenState extends State<CountriesListScreeen> {
                                   searchController.text.toLowerCase())) {
                                 return Column(
                                   children: [
-                                    InkWell(
-                                      onTap: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                              builder: (context) => DetailScreen(
-                                                  name: snapshot.data![index]
-                                                      ["country"],
-                                                  totalCases: snapshot.data![index]
-                                                      ['cases'],
-                                                  totalDeaths: snapshot
-                                                      .data![index]["deaths"],
-                                                  totalRecovered:
-                                                      snapshot.data![index]
-                                                          ["recovered"],
-                                                  todayCases: snapshot.data![index]
-                                                      ["todayCases"],
-                                                  active: snapshot.data![index]
-                                                      ["active"],
-                                                  critical: snapshot.data![index]
-                                                      ["critical"],
-                                                  todayRecovered:
-                                                      snapshot.data![index]
-                                                          ["todayRecovered"],
-                                                  test: snapshot.data![index]["tests"]),
-                                            ));
-                                      },
-                                      child: ListTile(
-                                        title: Text(
-                                            snapshot.data![index]['country']),
-                                        subtitle: Text(
-                                            "Total Cases: ${(snapshot.data![index]['cases'])}"),
-                                        leading: Image(
-                                            height: 50,
-                                            width: 50,
-                                            image: NetworkImage(
-                                              snapshot.data![index]
-                                                  ['countryInfo']['flag'],
-                                            )),
+                                    Card(
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(10)),
+                                      elevation: 8,
+                                      shadowColor: Colors.grey[500],
+                                      child: InkWell(
+                                        borderRadius: BorderRadius.circular(10),
+                                        onTap: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => DetailScreen(
+                                                    name: snapshot.data![index]
+                                                        ["country"],
+                                                    totalCases: snapshot.data![index]
+                                                        ['cases'],
+                                                    totalDeaths: snapshot
+                                                        .data![index]["deaths"],
+                                                    totalRecovered:
+                                                        snapshot.data![index]
+                                                            ["recovered"],
+                                                    todayCases: snapshot.data![index]
+                                                        ["todayCases"],
+                                                    active: snapshot.data![index]
+                                                        ["active"],
+                                                    critical: snapshot.data![index]
+                                                        ["critical"],
+                                                    todayRecovered:
+                                                        snapshot.data![index]
+                                                            ["todayRecovered"],
+                                                    test: snapshot.data![index]["tests"]),
+                                              ));
+                                        },
+                                        child: ListTile(
+                                          title: Text(
+                                              snapshot.data![index]['country']),
+                                          subtitle: Text(
+                                              "Total Cases: ${(snapshot.data![index]['cases'])}"),
+                                          leading: Image(
+                                              height: 50,
+                                              width: 50,
+                                              image: NetworkImage(
+                                                snapshot.data![index]
+                                                    ['countryInfo']['flag'],
+                                              )),
+                                        ),
                                       ),
                                     )
                                   ],

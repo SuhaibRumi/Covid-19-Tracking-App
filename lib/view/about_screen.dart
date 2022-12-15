@@ -26,7 +26,7 @@ class _AboutState extends State<About> with TickerProviderStateMixin {
     _controllerImage = new AnimationController(
         duration: Duration(milliseconds: 3000), vsync: this)
       ..addListener(() => setState(() {}));
-    animation = Tween(begin: 50.0, end: 20.0).animate(_controllerImage);
+    animation = Tween(begin: 5.0, end: 20.0).animate(_controllerImage);
     _controllerImage.repeat();
     _controller.repeat();
   }
@@ -87,9 +87,9 @@ class _AboutState extends State<About> with TickerProviderStateMixin {
         Align(
           alignment: Alignment.topRight,
           child: Opacity(
-            opacity: 0.5,
+            opacity: 0.4,
             child: RotationTransition(
-              turns: Tween(begin: 0.0, end: 1.0).animate(_controller),
+              turns: Tween(begin: 2.0, end: 1.0).animate(_controller),
               child: Image.asset(
                 'assets/images/covidGreen.png',
                 height: height * 0.2,
@@ -112,16 +112,6 @@ class PersonalInfo extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Text(
-          "DEVELOPER",
-          style: TextStyle(
-              fontFamily: 'MyFont',
-              fontWeight: FontWeight.w500,
-              fontSize: height * 0.04),
-        ),
-        SizedBox(
-          height: height * 0.03,
-        ),
         CircleAvatar(
           maxRadius: height * 0.105,
           backgroundColor: Colors.blue,
