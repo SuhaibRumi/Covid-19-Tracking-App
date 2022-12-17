@@ -69,7 +69,7 @@ class _CountriesListScreeenState extends State<CountriesListScreeen> {
                     builder: ((context, AsyncSnapshot<List<dynamic>> snapshot) {
                       if (!snapshot.hasData) {
                         return ListView.builder(
-                            itemCount: 10,
+                            itemCount: 50,
                             itemBuilder: (context, index) {
                               return Shimmer.fromColors(
                                 baseColor: kBGColor,
