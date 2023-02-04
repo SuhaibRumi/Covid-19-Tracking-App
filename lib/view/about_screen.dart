@@ -118,7 +118,7 @@ class PersonalInfo extends StatelessWidget {
           child: CircleAvatar(
             maxRadius: height * 0.10,
             backgroundImage: NetworkImage(
-                "https://pbs.twimg.com/profile_images/1595796649246343169/y4H_svjl_400x400.jpg"),
+                "https://avatars.githubusercontent.com/u/84827527?s=400&u=3d913226a67f8d671b4377e2222553dc9a6b1d79&v=4"),
           ),
         ),
         SizedBox(
