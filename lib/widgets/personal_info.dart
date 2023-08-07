@@ -15,9 +15,8 @@ class PersonalInfo extends StatelessWidget {
           maxRadius: height * 0.105,
           backgroundColor: Colors.blue,
           child: CircleAvatar(
-            maxRadius: height * 0.10,
-            backgroundImage: NetworkImage(ImageAssets.personalImg),
-          ),
+              maxRadius: height * 0.10,
+              backgroundImage: AssetImage(ImageAssets.personalImage)),
         ),
         SizedBox(
           height: height * 0.01,
@@ -35,7 +34,6 @@ class PersonalInfo extends StatelessWidget {
           "Flutter Developer",
           style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontFamily: 'Roboto Mono',
               fontSize: height * 0.028),
         ),
         SizedBox(
