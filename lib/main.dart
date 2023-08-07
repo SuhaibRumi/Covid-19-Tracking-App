@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Covoid -19 Tracking App',
+      title: 'Covoid-19 Tracking App',
       theme:
           ThemeData(primarySwatch: Colors.blue, brightness: Brightness.light),
       home: const SplashScreen(),
