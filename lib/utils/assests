@@ -1,0 +1,2 @@
+final appLogoPNG = 'assets/images/app_logo.png';
+final appLogoDarkPNG = 'assets/images/app_logo_dark.png';
