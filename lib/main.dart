@@ -1,5 +1,7 @@
+import 'package:covid_19_tracking_app/utils/assests.dart';
 import 'package:covid_19_tracking_app/view/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'utils/color.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Covoid -19 Tracking App',
-      theme:
-          ThemeData(primarySwatch: Colors.blue, brightness: Brightness.light),
+      title: appTitle,
+        theme: ThemeData(primaryColor: primaryColor, brightness: Brightness.light),
       home: const SplashScreen(),
     );
   }

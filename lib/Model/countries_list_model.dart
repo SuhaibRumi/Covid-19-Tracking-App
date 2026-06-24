@@ -1,4 +1,3 @@
-
 class CountriesListModel {
   CountriesListModel({
       int? updated, 
@@ -154,12 +153,6 @@ class CountriesListModel {
 
 }
 
-/// _id : 4
-/// iso2 : "AF"
-/// iso3 : "AFG"
-/// lat : 33
-/// long : 65
-/// flag : "https://disease.sh/assets/img/flags/af.png"
 class CountryInfo {
   CountryInfo({
       int? id, 

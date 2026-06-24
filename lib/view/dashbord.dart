@@ -3,6 +3,8 @@ import 'package:covid_19_tracking_app/view/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../utils/assests.dart';
+
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
 
@@ -156,7 +158,7 @@ class _MainImageState extends State<MainImage>
         child: Column(
           children: <Widget>[
             Image.asset(
-              'assets/images/personFighting.png',
+             personfighting,
             ),
             SizedBox(
               height: 10,

@@ -1,3 +1,4 @@
+import 'package:covid_19_tracking_app/utils/color.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -29,22 +30,22 @@ class HomeTile extends StatelessWidget {
         Text(
           "COVID-19",
           style: TextStyle(
-              fontFamily: 'MyFont',
-              color: Colors.white,
+              fontFamily: primaryFont,
+              color: whiteColor,
               fontSize: height * 0.015),
         ),
         SizedBox(height: height * 0.007),
         Text("Total $infoHeader",
             style: TextStyle(
-                fontFamily: 'MyFont',
-                color: Colors.white,
+                fontFamily: primaryFont,
+                color: whiteColor,
                 fontWeight: FontWeight.bold,
                 fontSize: height * 0.02)),
         Text("${formatter.format(caseCount)}",
             style: TextStyle(
-                color: Colors.white,
+                color: whiteColor,
                 fontSize: height * 0.025,
-                fontFamily: 'MyFont'))
+                fontFamily: primaryFont,))
       ],
     ),
         ),

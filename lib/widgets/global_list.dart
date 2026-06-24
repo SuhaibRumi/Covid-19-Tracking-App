@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/color.dart';
+
 class GlobalListTile extends StatelessWidget {
   final String caseInfo;
   final String infoHeader;
@@ -31,20 +33,20 @@ class GlobalListTile extends StatelessWidget {
                   Text(
                     "Global",
                     style: TextStyle(
-                        color: Colors.white,
+                        color:whiteColor,
                         fontSize: height * .015,
-                        fontFamily: 'MyFont'),
+                        fontFamily:   primaryFont),
                   ),
                   Text("Total $infoHeader",
                       style: TextStyle(
-                          fontFamily: 'MyFont',
-                          color: Colors.white,
+                          fontFamily:   primaryFont,
+                          color: whiteColor,
                           fontWeight: FontWeight.bold,
                           fontSize: height * 0.025)),
                   Text(caseInfo,
                       style: TextStyle(
-                          fontFamily: 'MyFont',
-                          color: Colors.white,
+                          fontFamily:   primaryFont,
+                          color: whiteColor,
                           fontSize: height * 0.025))
                 ],
               ),

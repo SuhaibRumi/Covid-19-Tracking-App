@@ -1,7 +1,8 @@
+import 'package:covid_19_tracking_app/utils/assests.dart';
 import 'package:covid_19_tracking_app/utils/color.dart';
 import 'package:flutter/material.dart';
-
-import '../widgets/customLoader.dart';
+import '../widgets/virus_Loader.dart';
+import '../widgets/details_card.dart';
 
 class DetailScreen extends StatefulWidget {
   final String name;
@@ -60,58 +61,58 @@ class _DetailScreenState extends State<DetailScreen> {
                 children: [
                   Column(children: <Widget>[
                     DetailCard(
-                      title: "Today Cases",
+                      title: todayCasesTitle,
                       subtitle: widget.todayCases.toString(),
                       icon: Icons.masks,
-                      iconColor: Colors.blue,
+                      iconColor:todayCase,
                     ),
                     DetailCard(
-                      title: "Today Recovered",
+                      title: todayRecoveredTitle,
                       subtitle: widget.todayRecovered.toString(),
                       icon: Icons.security,
-                      iconColor: Colors.green,
+                      iconColor: todayRecovered,
                     ),
                     DetailCard(
-                      title: "Today Deaths",
+                      title: todayDeathsTitle,
                       subtitle: widget.totalDeaths.toString(),
                       icon: Icons.person,
-                      iconColor: Colors.red,
+                      iconColor: totalDeaths,
                     ),
                     DetailCard(
-                      title: "Actives Cases",
+                      title: activeCasesTitle,
                       subtitle: widget.active.toString(),
                       icon: Icons.access_time,
-                      iconColor: Colors.purple,
+                      iconColor: activeCases,
                     ),
                     DetailCard(
-                      title: "Total Cases",
+                      title: totalCasesTitle,
                       subtitle: widget.totalCases.toString(),
                       icon: Icons.assignment,
-                      iconColor: Colors.blue,
+                      iconColor:  totalCase,
                     ),
                     DetailCard(
-                      title: "Total Deaths",
-                      iconColor: Colors.red,
+                      title:  totalDeathsTitle,
+                      iconColor: totalDeaths,
                       icon: Icons.airline_seat_individual_suite,
                       subtitle: widget.totalDeaths.toString(),
                     ),
                     DetailCard(
-                      title: "Total Recoveries",
-                      iconColor: Colors.green,
+                      title: totalRecoveredTitle,
+                      iconColor: totalRecovered,
                       icon: Icons.security_update_good,
                       subtitle: widget.totalRecovered.toString(),
                     ),
                     DetailCard(
-                      title: "Total Tests",
+                      title: totalTestsTitle,
                       subtitle: widget.test.toString(),
                       icon: Icons.colorize,
-                      iconColor: Colors.amber,
+                      iconColor: testCases,
                     ),
                     DetailCard(
-                      title: "Critical Cases",
+                      title: criticalCasesTitle,
                       subtitle: widget.critical.toString(),
                       icon: Icons.add_circle,
-                      iconColor: Colors.deepOrange,
+                      iconColor: criticalCases,
                     ),
                   ]),
                 ],
@@ -124,44 +125,3 @@ class _DetailScreenState extends State<DetailScreen> {
   }
 }
 
-// * this is custome card Widget
-class DetailCard extends StatelessWidget {
-  final String title;
-  final String subtitle;
-  final IconData icon;
-  final Color iconColor;
-  DetailCard(
-      {required this.title,
-      required this.icon,
-      required this.subtitle,
-      required this.iconColor});
-
-  @override
-  Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      elevation: 8,
-      shadowColor: Colors.grey[500],
-      child: Container(
-        padding: EdgeInsets.all(5.0),
-        child: ListTile(
-          title: Text(
-            subtitle,
-            style: TextStyle(fontSize: height * 0.03, fontFamily: "MyFont"),
-          ),
-          subtitle: Text(
-            title,
-            style: TextStyle(fontSize: height * 0.02, fontFamily: "MyFont"),
-          ),
-          trailing: Icon(
-            icon,
-            size: height * 0.06,
-            color: iconColor,
-          ),
-        ),
-      ),
-    );
-  }
-}

@@ -22,14 +22,15 @@ class _CountriesListScreeenState extends State<CountriesListScreeen> {
     double height = MediaQuery.of(context).size.height;
 
     return Scaffold(
-        backgroundColor: Colors.grey[100],
+        backgroundColor:secondaryColor,
         appBar: AppBar(
-          backgroundColor: kCardColor,
+          backgroundColor:kBGColor,
           automaticallyImplyLeading: false,
           centerTitle: true,
-          title: const Text(
+          title:  Text(
             "Countires List",
             style: TextStyle(fontSize: 22),
+            selectionColor: whiteColor,
           ),
         ),
         body: SafeArea(
@@ -81,7 +82,7 @@ class _CountriesListScreeenState extends State<CountriesListScreeen> {
                                           height: 20,
                                           width: 10,
                                           decoration: BoxDecoration(
-                                              color: Colors.white,
+                                              color:whiteColor,
                                               borderRadius:
                                                   BorderRadius.circular(10))),
                                       subtitle: Container(
@@ -89,12 +90,12 @@ class _CountriesListScreeenState extends State<CountriesListScreeen> {
                                               const EdgeInsets.only(right: 50),
                                           height: 15,
                                           decoration: BoxDecoration(
-                                              color: Colors.white,
+                                              color:whiteColor,
                                               borderRadius:
                                                   BorderRadius.circular(10))),
                                       leading: Container(
                                         decoration: BoxDecoration(
-                                            color: Colors.white,
+                                            color:  whiteColor,
                                             borderRadius:
                                                 BorderRadius.circular(10)),
                                         height: 50,
@@ -119,7 +120,7 @@ class _CountriesListScreeenState extends State<CountriesListScreeen> {
                                           borderRadius:
                                               BorderRadius.circular(10)),
                                       elevation: 8,
-                                      shadowColor: Colors.grey[500],
+                                      shadowColor:shadowColor,
                                       child: InkWell(
                                         onTap: () {
                                           Navigator.push(

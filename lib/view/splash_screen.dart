@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:covid_19_tracking_app/view/dashbord.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
+import '../utils/assests.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -41,13 +42,13 @@ class _SplashScreenState extends State<SplashScreen>
           children: [
             AnimatedBuilder(
                 animation: _controller,
-                child: const Center(
+                child:  Center(
                   child: Image(
                       height: 200,
                       width: 200,
                       fit: BoxFit.cover,
                       image: AssetImage(
-                        "assets/images/covid.png",
+                       splashScreenImage
                       )),
                 ),
                 builder: (BuildContext context, Widget? child) {
@@ -59,10 +60,10 @@ class _SplashScreenState extends State<SplashScreen>
             const SizedBox(
               height: 30,
             ),
-            const Align(
+             Align(
                 alignment: Alignment.center,
                 child: Text(
-                  "Covid- 19\nTracking app",
+                  homeScreenTitle,
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 )),

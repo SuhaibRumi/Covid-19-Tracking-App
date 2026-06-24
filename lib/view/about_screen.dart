@@ -1,8 +1,8 @@
+import 'package:covid_19_tracking_app/utils/assests.dart';
 import 'package:flutter/material.dart';
 
-import 'package:covid_19_tracking_app/utils/color.dart';
-
 import '../animation/faderAnimation.dart';
+import '../widgets/personal_info.dart';
 
 class About extends StatefulWidget {
   @override
@@ -57,7 +57,7 @@ class _AboutState extends State<About> with TickerProviderStateMixin {
               child: RotationTransition(
                 turns: Tween(begin: 1.0, end: 0.0).animate(_controller),
                 child: Image.asset(
-                  'assets/images/covidBlue.png',
+               covidBlue,
                   height: height * 0.20,
                 ),
               ),
@@ -77,7 +77,7 @@ class _AboutState extends State<About> with TickerProviderStateMixin {
               child: RotationTransition(
                 turns: Tween(begin: 0.0, end: 1.0).animate(_controller),
                 child: Image.asset(
-                  'assets/images/covidRed.png',
+                covidRed,
                   height: height * 0.18,
                 ),
               ),
@@ -91,7 +91,7 @@ class _AboutState extends State<About> with TickerProviderStateMixin {
             child: RotationTransition(
               turns: Tween(begin: 2.0, end: 1.0).animate(_controller),
               child: Image.asset(
-                'assets/images/covidGreen.png',
+             covidGreen,
                 height: height * 0.2,
               ),
             ),
@@ -105,91 +105,3 @@ class _AboutState extends State<About> with TickerProviderStateMixin {
   }
 }
 
-class PersonalInfo extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        CircleAvatar(
-          maxRadius: height * 0.105,
-          backgroundColor: Colors.blue,
-          child: CircleAvatar(
-            maxRadius: height * 0.10,
-            backgroundImage: NetworkImage(
-                "https://pbs.twimg.com/profile_images/1595796649246343169/y4H_svjl_400x400.jpg"),
-          ),
-        ),
-        SizedBox(
-          height: height * 0.01,
-        ),
-        Text("Muhammad Suhaib Salman",
-            style: TextStyle(
-                fontFamily: 'MyFont',
-                color: kBGColor,
-                fontSize: height * 0.03,
-                fontWeight: FontWeight.bold)),
-        SizedBox(
-          height: height * 0.03,
-        ),
-        Text(
-          "Flutter Developer",
-          style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontFamily: 'Roboto Mono',
-              fontSize: height * 0.028),
-        ),
-        SizedBox(
-          height: height * 0.02,
-        ),
-        ListView(
-          shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
-          children: [
-            MainInfo(
-                username: "suhaibsohan007@gmail.com",
-                imgUrl: 'assets/images/gmail-logo.png'),
-            MainInfo(
-                username: "SuhaibRumi",
-                imgUrl: 'assets/images/github-logo.png'),
-          ],
-        )
-      ],
-    );
-  }
-}
-
-class MainInfo extends StatelessWidget {
-  final String, username, imgUrl;
-  MainInfo(
-      {Key? key, required this.username, required this.imgUrl, this.String})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(8),
-      width: MediaQuery.of(context).size.width,
-      child: Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        elevation: 8,
-        shadowColor: Colors.grey[500],
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 5.0),
-          child: ListTile(
-            leading: Image(
-              height: 50,
-              width: 50,
-              image: AssetImage(imgUrl),
-            ),
-            title: Text(
-              username,
-              style: const TextStyle(color: kBGColor, fontSize: 16),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
